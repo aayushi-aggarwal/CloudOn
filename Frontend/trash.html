@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet" />
+
+	
+	<link rel="stylesheet" href="css.css">
+
+	<title>CloudOn</title>
+
+	
+
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" id="theme-styles">
+</head>
+<body onload="onloadlistTrash()">
+
+
+
+	
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<h4
+			  class="modal-title"
+			  id="exampleModalLongTitle"
+			  style="font-size: 1.5rem"
+			>
+			  Add new
+			</h4>
+			<br />
+			<button
+			  type="button"
+			  class="close"
+			  data-dismiss="modal"
+			  aria-label="Close"
+			>
+			  <span aria-hidden="true">&times;</span>
+			</button>
+		  </div>
+		  <div class="modal-body">
+			<div class="file-body">
+			  <div class="whole-content" id="dropzone">
+				<img src="../img/cloud-download.png" class="modal-image" />
+  
+				<input type="file" id="file" style="display: none" />
+				<br /><br />
+				<input
+				  id="fo"
+				  type="search"
+				  placeholder="Folder Name"
+				  style="width: 150px"
+				/><br /><br />
+				<ul id="path"></ul>
+				<button
+				  class="upload-files"
+				  id="addfolder"
+				  onclick="createFolder()"
+				>
+				  Add Folder
+				</button>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+  
+<!-- SIDEBAR -->
+<section id="sidebar">
+	<a href="./dashboard.html" class="brand">
+		<img src="../img/logo.png" alt="easyclass" class="bx" style="width: 50px;"/>
+
+		<span class="text">CloudOn</span>
+	</a>
+	<ul class="side-menu top">
+		<li>
+
+	<a href="#">
+
+		<i class='bx bx-plus'></i>
+		<span class="text">Add New</span>
+	</a>
+</li>
+
+			</li>
+			<li >
+				<a href="./dashboard.html">
+					<i class='bx bxs-dashboard' ></i>
+					<span class="text">Dashboard</span>
+				</a>
+			</li>
+		
+		
+			<li>
+				<a href="recents.html">
+					<i class='bx bx-time-five'></i>
+					<span class="text">Recents</span>
+				</a>
+			</li>
+			 <li>
+				<a href="favourites.html">
+					
+					<i class='bx bx-star' ></i>
+					<span class="text">Favourites</span>
+				</a>
+			</li> 
+			<li class="active">
+				<a href="#">
+					
+					<i class='bx bx-trash' ></i>
+					<span class="text">Trash</span>
+				</a>
+			</li> 
+			
+		</ul>
+		<ul class="side-menu">
+			<li>
+				<a href="#">
+					
+					<i class='bx bx-cog' ></i>
+					<span class="text">Settings</span>
+				</a>
+			</li> 
+			
+			<li>
+				<a href="#" class="logout">
+					<i class='bx bxs-log-out-circle' ></i>
+					<span class="text" onclick="logout()">Logout</span>
+				</a>
+			</li>
+		</ul>
+	</section>
+	<section id="content">
+		<!-- NAVBAR -->
+		<nav>
+			<i class='bx bx-menu' ></i>
+			<a href="#" class="nav-link"></a>
+			<form action="#">
+				<div class="form-input">
+					<input type="text" placeholder="Search..." id="search" oninput="search1()">
+					<button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
+				</div>
+			</form>
+			<span id="text-name"></span>
+
+		</nav>
+		
+
+		<!-- MAIN -->
+		<div id="mainn">
+			
+		</div>
+
+	
+	</section>
+	<script src="trash.js"></script>
+</body>
+</html>
